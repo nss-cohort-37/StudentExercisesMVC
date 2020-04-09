@@ -118,7 +118,7 @@ namespace StudentExercisesMVC.Controllers
         // POST: Students/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, Student student)
+        public ActionResult Edit(int id, [FromForm] Student student)
         {
             try
             {
@@ -167,7 +167,7 @@ namespace StudentExercisesMVC.Controllers
         // POST: Students/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, Student student)
+        public ActionResult DeleteStudent([FromRoute] int id)
         {
             try
             {
